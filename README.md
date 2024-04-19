@@ -1,5 +1,11 @@
-FORMULAIRE ANTI BROUTEUR 
+<h1>FORMULAIRE DE DETECTION DE BROUTEUR </h1>
 
-BY remysimpson
+<b>Répond aux questions et voit si tu a affaire a un brouteur ou pas </b>
 
-en cours de creation 
+<i>DANS TOUT LES CAS SOIS PRUDENTS  </i>
+
+
+<H2> COMMENT L INSTALLER </h2>
+iil SUFFIT D UN SEREUR HTML ( meme sur ton pc sans aucune installation juste telecharger et cliquer dessus ) 
+
+ps : créer par remysimpson
