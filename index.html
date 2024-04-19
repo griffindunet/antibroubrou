@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire</title>
+<style>
+    /* Style pour le formulaire */
+    form {
+        width: 50%;
+        margin: 0 auto;
+    }
+    input[type="checkbox"] {
+        margin-bottom: 10px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    #result {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <form onsubmit="return checkForm()">
+        <label>Vous ne l'avez jamais vu en réel ?</label><br>
+        <input type="checkbox" id="reel_non" name="reel_non" value="oui">
+        <label for="reel_non">Oui</label><br>
+        <input type="checkbox" id="reel_oui" name="reel_oui" value="non">
+        <label for="reel_oui">Non</label><br>
+
+        <label>Vous dit être en déplacement à l'étranger ?</label><br>
+        <input type="checkbox" id="deplacement_oui" name="deplacement_oui" value="oui">
+        <label for="deplacement_oui">Oui</label><br>
+        <input type="checkbox" id="deplacement_non" name="deplacement_non" value="non">
+        <label for="deplacement_non">Non</label><br>
+
+        <label>Vous a demandé de passer sur Hangouts, WhatsApp, Viber, Signal ... ?</label><br>
+        <input type="checkbox" id="messagerie_oui" name="messagerie_oui" value="oui">
+        <label for="messagerie_oui">Oui</label><br>
+        <input type="checkbox" id="messagerie_non" name="messagerie_non" value="non">
+        <label for="messagerie_non">Non</label><br>
+
+        <label>Sa webcam / caméra ne fonctionne pas ?</label><br>
+        <input type="checkbox" id="webcam_oui" name="webcam_oui" value="oui">
+        <label for="webcam_oui">Oui</label><br>
+        <input type="checkbox" id="webcam_non" name="webcam_non" value="non">
+        <label for="webcam_non">Non</label><br>
+
+        <label>A un numéro qui commence par 07.56.. ou 07.80... ou 06.44...?</label><br>
+        <input type="checkbox" id="numero_oui" name="numero_oui" value="oui">
+        <label for="numero_oui">Oui</label><br>
+        <input type="checkbox" id="numero_non" name="numero_non" value="non">
+        <label for="numero_non">Non</label><br>
+
+        <label>Vous a demandé de l'aider financièrement ?</label><br>
+        <input type="checkbox" id="aide_oui" name="aide_oui" value="oui">
+        <label for="aide_oui">Oui</label><br>
+        <input type="checkbox" id="aide_non" name="aide_non" value="non">
+        <label for="aide_non">Non</label><br>
+
+        <label>Vous a déclaré son amour pour vous rapidement ?</label><br>
+        <input type="checkbox" id="amour_oui" name="amour_oui" value="oui">
+        <label for="amour_oui">Oui</label><br>
+        <input type="checkbox" id="amour_non" name="amour_non" value="non">
+        <label for="amour_non">Non</label><br>
+
+        <label>Est veuf/veuve ou divorcé ?</label><br>
+        <input type="checkbox" id="divorce_oui" name="divorce_oui" value="oui">
+        <label for="divorce_oui">Oui</label><br>
+        <input type="checkbox" id="divorce_non" name="divorce_non" value="non">
+        <label for="divorce_non">Non</label><br>
+
+        <label>A des soucis avec sa banque, les douanes ... ?</label><br>
+        <input type="checkbox" id="soucis_oui" name="soucis_oui" value="oui">
+        <label for="soucis_oui">Oui</label><br>
+        <input type="checkbox" id="soucis_non" name="soucis_non" value="non">
+        <label for="soucis_non">Non</label><br>
+
+        <label>Vous a demandé des coupons PCS, Transcash, Western Union ... ?</label><br>
+        <input type="checkbox" id="coupons_oui" name="coupons_oui" value="oui">
+        <label for="coupons_oui">Oui</label><br>
+        <input type="checkbox" id="coupons_non" name="coupons_non" value="non">
+        <label for="coupons_non">Non</label><br>
+
+        <label>Vous l'avez vu en vidéo mais n'avez pas pu lui parler en direct ?</label><br>
+        <input type="checkbox" id="video_oui" name="video_oui" value="oui">
+        <label for="video_oui">Oui</label><br>
+        <input type="checkbox" id="video_non" name="video_non" value="non">
+        <label for="video_non">Non</label><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <div id="result"></div>
+
+
+  <script>
+    function checkForm() {
+        var videoOui = document.querySelectorAll('input[name="video_oui"]:checked').length;
+        var videoNon = document.querySelectorAll('input[name="video_non"]:checked').length;
+
+        var resultDiv = document.getElementById('result');
+
+        if (videoOui > videoNon) {
+            resultDiv.textContent = "Brouteur";
+        } else {
+            resultDiv.textContent = "Des doutes persistent. Soyez prudent.";
+        }
+
+        return false; // Empêche l'envoi du formulaire pour le moment
+    }
+</script>
+
+ 
+</body>
+</html>
