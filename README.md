@@ -6,6 +6,6 @@
 
 
 <H2> COMMENT L INSTALLER </h2>
-iil SUFFIT D UN SEREUR HTML ( meme sur ton pc sans aucune installation juste telecharger et cliquer dessus ) 
+il SUFFIT D UN SEREUR HTML ( meme sur ton pc sans aucune installation juste telecharger et cliquer dessus ) 
 
 ps : créer par remysimpson
